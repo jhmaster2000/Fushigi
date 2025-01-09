@@ -1,5 +1,5 @@
 ﻿using Fushigi.gl.Mesh;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using Silk.NET.SDL;
 using System;
 using System.Collections.Generic;

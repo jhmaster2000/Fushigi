@@ -2,7 +2,7 @@
 using System.IO;
 using System.Numerics;
 using Fushigi.Logger;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 
 namespace Fushigi.gl
 {

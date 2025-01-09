@@ -1,5 +1,5 @@
 ﻿using Fushigi.Bfres;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using System.Numerics;
 
 namespace Fushigi.gl.Bfres

@@ -8,7 +8,7 @@ using Fushigi.ui.SceneObjects.bgunit;
 using Fushigi.ui.undo;
 using Fushigi.util;
 using ImGuiNET;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using System.Collections.Immutable;
 using System.Numerics;
 using System.Runtime.CompilerServices;

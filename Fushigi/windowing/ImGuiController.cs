@@ -6,7 +6,7 @@ using ImGuiNET;
 using Silk.NET.Input;
 using Silk.NET.Maths;
 
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 
 using Silk.NET.Windowing;
 using System.Runtime.CompilerServices;
@@ -16,8 +16,8 @@ using Silk.NET.Input.Extensions;
 using Silk.NET.Windowing.Glfw;
 using Sdl = Silk.NET.SDL.Sdl;
 using Silk.NET.Windowing.Sdl;
-using PixelFormat = Silk.NET.OpenGL.PixelFormat;
-using PixelType = Silk.NET.OpenGL.PixelType;
+using PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat;
+using PixelType = Silk.NET.OpenGL.Legacy.PixelType;
 
 
 namespace Fushigi.windowing;

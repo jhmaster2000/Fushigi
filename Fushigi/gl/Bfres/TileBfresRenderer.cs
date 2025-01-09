@@ -2,7 +2,7 @@
 using Fushigi.Bfres;
 using Fushigi.course;
 using Fushigi.util;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using System.Diagnostics;
 using System.Numerics;
 using static Fushigi.course.CourseUnit;

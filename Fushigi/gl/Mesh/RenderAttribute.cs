@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using System.Numerics;
 
 namespace Fushigi.gl

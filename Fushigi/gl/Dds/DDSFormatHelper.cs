@@ -1,4 +1,4 @@
-﻿using Silk.NET.OpenGL;
+﻿using Silk.NET.OpenGL.Legacy;
 using static Fushigi.gl.Bfres.GLFormatHelper;
 
 namespace Fushigi.gl
