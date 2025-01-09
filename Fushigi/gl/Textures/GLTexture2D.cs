@@ -1,6 +1,6 @@
 ﻿using Fushigi.gl.Bfres;
 using Silk.NET.Core.Native;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using Silk.NET.SDL;
 using StbImageSharp;
 using System;
@@ -22,9 +22,9 @@ namespace Fushigi.gl
         }
 
         public static GLTexture2D CreateUncompressedTexture(GL gl, uint width, uint height
-            , InternalFormat format = InternalFormat.Rgba,
-             Silk.NET.OpenGL.PixelFormat pixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba,
-              Silk.NET.OpenGL.PixelType pixelType = Silk.NET.OpenGL.PixelType.UnsignedByte)
+            , Silk.NET.OpenGL.Legacy.InternalFormat format = Silk.NET.OpenGL.Legacy.InternalFormat.Rgba,
+             Silk.NET.OpenGL.Legacy.PixelFormat pixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba,
+              Silk.NET.OpenGL.Legacy.PixelType pixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte)
         {
             GLTexture2D tex = new GLTexture2D(gl);
             tex.Width = width;
@@ -56,8 +56,8 @@ namespace Fushigi.gl
             tex.Width = width;
             tex.Height = height;
             tex.InternalFormat = InternalFormat.Rgba;
-            tex.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
-            tex.PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
+            tex.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
+            tex.PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
 
             tex.Bind();
 
@@ -107,8 +107,8 @@ namespace Fushigi.gl
             this.Height = (uint)image.Height;
 
             this.InternalFormat = InternalFormat.Rgba;
-            this.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
-            this.PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
+            this.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
+            this.PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
 
             LoadImage(image.Data);
         }
@@ -119,8 +119,8 @@ namespace Fushigi.gl
             this.Height = (uint)height;
 
             this.InternalFormat = InternalFormat.Rgba;
-            this.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
-            this.PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
+            this.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
+            this.PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
 
             LoadImage(rgba);
         }
@@ -131,8 +131,8 @@ namespace Fushigi.gl
             this.Height = (uint)height;
 
             this.InternalFormat = InternalFormat.Rgba;
-            this.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
-            this.PixelType = Silk.NET.OpenGL.PixelType.Float;
+            this.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
+            this.PixelType = Silk.NET.OpenGL.Legacy.PixelType.Float;
 
             Bind();
 
@@ -142,10 +142,16 @@ namespace Fushigi.gl
                     PixelFormat, PixelType, ptr);
             }
 
-            _gl.TextureParameter(ID, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
-            _gl.TextureParameter(ID, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
-            _gl.TextureParameter(ID, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.LinearMipmapLinear);
-            _gl.TextureParameter(ID, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
+            // Set texture parameters using glTexParameteri (instead of glTextureParameteri)
+            _gl.BindTexture(Target, ID);  // Make sure the texture is bound before setting parameters
+
+            // Set wrap mode for S and T axes (repeat texture wrapping)
+            _gl.TexParameter(Target, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
+            _gl.TexParameter(Target, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
+
+            // Set filtering mode for minification and magnification
+            _gl.TexParameter(Target, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.LinearMipmapLinear);
+            _gl.TexParameter(Target, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
 
             _gl.GenerateMipmap(Target);
 
@@ -162,10 +168,16 @@ namespace Fushigi.gl
                     PixelFormat, PixelType, ptr);
             }
 
-            _gl.TextureParameter(ID, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
-            _gl.TextureParameter(ID, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
-            _gl.TextureParameter(ID, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Linear);
-            _gl.TextureParameter(ID, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
+            // Set texture parameters using glTexParameteri (instead of glTextureParameteri)
+            _gl.BindTexture(Target, ID);  // Make sure the texture is bound before setting parameters
+
+            // Set wrap mode for S and T axes (repeat texture wrapping)
+            _gl.TexParameter(Target, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
+            _gl.TexParameter(Target, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
+
+            // Set filtering mode for minification and magnification
+            _gl.TexParameter(Target, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Linear);
+            _gl.TexParameter(Target, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
 
             _gl.GenerateMipmap(Target);
 
