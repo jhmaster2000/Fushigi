@@ -11,7 +11,7 @@ using Fushigi.param;
 using Fushigi.ui.undo;
 using Fushigi.util;
 using ImGuiNET;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using System.Data;
 using System.Drawing;
 using System.Numerics;
@@ -315,8 +315,8 @@ namespace Fushigi.ui.widgets
 
             gl.Enable(EnableCap.DepthTest);
 
-            //Start drawing the scene. Bfres draw upside down so flip the viewport clip
-            gl.ClipControl(ClipControlOrigin.UpperLeft, ClipControlDepth.ZeroToOne);
+            //!Start drawing the scene. Bfres draw upside down so flip the viewport clip
+            //gl.ClipControl(ClipControlOrigin.UpperLeft, ClipControlDepth.ZeroToOne);
 
             if (!CourseScene.HideWalls)
             {
@@ -391,8 +391,8 @@ namespace Fushigi.ui.widgets
                 RenderActor(actor, actor.mActorPack.DrawArrayModelInfoRef);
             }
 
-            //Reset back to defaults
-            gl.ClipControl(ClipControlOrigin.LowerLeft, ClipControlDepth.ZeroToOne);
+            //!Reset back to defaults
+            //gl.ClipControl(ClipControlOrigin.LowerLeft, ClipControlDepth.ZeroToOne);
 
             Framebuffer.Unbind();
 
