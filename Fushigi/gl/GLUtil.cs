@@ -1,4 +1,4 @@
-﻿using Silk.NET.OpenGL;
+﻿using Silk.NET.OpenGL.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Fushigi.gl
         public static void Label(GL gl, ObjectIdentifier type, uint id, string text)
         {
 
-            gl.ObjectLabel(type, id, (uint)text.Length, text);
+            //gl.ObjectLabel(type, id, (uint)text.Length, text);
         }
     }
 }
