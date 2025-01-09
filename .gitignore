@@ -5,3 +5,8 @@ obj
 .DS_Store
 ConsoleApp1/*
 ConsoleApp2/*
+ShaderCache
+actor_icons
+*.ini
+*.log
+*.json
