@@ -3,7 +3,7 @@ using Silk.NET.Core;
 using Silk.NET.Core.Contexts;
 using Silk.NET.Input;
 using Silk.NET.Maths;
-using Silk.NET.OpenGL;
+using Silk.NET.OpenGL.Legacy;
 using Silk.NET.Windowing;
 
 namespace Fushigi.windowing
@@ -29,7 +29,7 @@ namespace Fushigi.windowing
                 ContextAPI.OpenGL,
                 ContextProfile.Core,
                 ContextFlags.Debug | ContextFlags.ForwardCompatible,
-                new APIVersion(3, 3)
+                new APIVersion(4, 1)
                 );
 
             if (initialWindowSize.TryGetValue(out var size))
@@ -43,7 +43,7 @@ namespace Fushigi.windowing
 
             window.Load += () =>
             {
-                sGL ??= _window.CreateOpenGL();
+                sGL ??= GL.GetApi(_window);
 
                 //initialization
                 if (_window.Native!.Win32.HasValue)
