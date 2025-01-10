@@ -13,7 +13,7 @@ namespace Fushigi.Logger
         {
             if (IsInitialized) return;
 
-            mOutputStream = new FileStream("output.log", FileMode.Create);
+            mOutputStream = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "output.log"), FileMode.Create);
             mConsoleWriter = new StreamWriter(mOutputStream)
             {
                 AutoFlush = true

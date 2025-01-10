@@ -20,10 +20,14 @@ internal class Program
 
         Logger.LogMessage("Program", $"Starting Fushigi {Version}...");
 
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) {
             Logger.LogMessage("Program", "Running on osx");
-        else
+            // log out CurrentDir
+            Environment.CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            Logger.LogMessage("Program", $"osx: Fixed CurrentDir: {Environment.CurrentDirectory}");
+        } else {
             Logger.LogMessage("Program", "Not running on osx");
+        }
 
         Logger.LogMessage("Program", "Loading user settings...");
         UserSettings.Load();
