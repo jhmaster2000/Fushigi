@@ -1,5 +1,5 @@
 ﻿using Fushigi.Logger;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,8 +41,8 @@ namespace Fushigi.gl
 
             Target = TextureTarget.Texture2D;
             InternalFormat = InternalFormat.Rgba;
-            PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
-            PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
+            PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
+            PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
         }
 
         public void Bind()

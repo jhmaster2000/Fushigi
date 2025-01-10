@@ -1,7 +1,7 @@
 ﻿using Fushigi.ui.modal;
 using Fushigi.util;
 using ImGuiNET;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System.Numerics;
 
 namespace Fushigi.ui.widgets

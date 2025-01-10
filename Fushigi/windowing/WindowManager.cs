@@ -3,7 +3,7 @@ using Silk.NET.Core;
 using Silk.NET.Core.Contexts;
 using Silk.NET.Input;
 using Silk.NET.Maths;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
 namespace Fushigi.windowing

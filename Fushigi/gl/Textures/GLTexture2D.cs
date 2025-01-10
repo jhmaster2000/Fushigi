@@ -1,6 +1,6 @@
 ﻿using Fushigi.gl.Bfres;
 using Silk.NET.Core.Native;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 using StbImageSharp;
 using System;
@@ -22,9 +22,9 @@ namespace Fushigi.gl
         }
 
         public static GLTexture2D CreateUncompressedTexture(GL gl, uint width, uint height
-            , Silk.NET.OpenGL.Legacy.InternalFormat format = Silk.NET.OpenGL.Legacy.InternalFormat.Rgba,
-             Silk.NET.OpenGL.Legacy.PixelFormat pixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba,
-              Silk.NET.OpenGL.Legacy.PixelType pixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte)
+            , Silk.NET.OpenGL.InternalFormat format = Silk.NET.OpenGL.InternalFormat.Rgba,
+             Silk.NET.OpenGL.PixelFormat pixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba,
+              Silk.NET.OpenGL.PixelType pixelType = Silk.NET.OpenGL.PixelType.UnsignedByte)
         {
             GLTexture2D tex = new GLTexture2D(gl);
             tex.Width = width;
@@ -56,8 +56,8 @@ namespace Fushigi.gl
             tex.Width = width;
             tex.Height = height;
             tex.InternalFormat = InternalFormat.Rgba;
-            tex.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
-            tex.PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
+            tex.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
+            tex.PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
 
             tex.Bind();
 
@@ -107,8 +107,8 @@ namespace Fushigi.gl
             this.Height = (uint)image.Height;
 
             this.InternalFormat = InternalFormat.Rgba;
-            this.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
-            this.PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
+            this.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
+            this.PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
 
             LoadImage(image.Data);
         }
@@ -119,8 +119,8 @@ namespace Fushigi.gl
             this.Height = (uint)height;
 
             this.InternalFormat = InternalFormat.Rgba;
-            this.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
-            this.PixelType = Silk.NET.OpenGL.Legacy.PixelType.UnsignedByte;
+            this.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
+            this.PixelType = Silk.NET.OpenGL.PixelType.UnsignedByte;
 
             LoadImage(rgba);
         }
@@ -131,8 +131,8 @@ namespace Fushigi.gl
             this.Height = (uint)height;
 
             this.InternalFormat = InternalFormat.Rgba;
-            this.PixelFormat = Silk.NET.OpenGL.Legacy.PixelFormat.Rgba;
-            this.PixelType = Silk.NET.OpenGL.Legacy.PixelType.Float;
+            this.PixelFormat = Silk.NET.OpenGL.PixelFormat.Rgba;
+            this.PixelType = Silk.NET.OpenGL.PixelType.Float;
 
             Bind();
 

@@ -6,7 +6,7 @@ using Fushigi.gl;
 using Fushigi.gl.Shaders;
 using Fushigi.ui.widgets;
 using Microsoft.VisualBasic;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 
 namespace Fushigi.gl

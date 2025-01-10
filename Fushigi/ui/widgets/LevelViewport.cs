@@ -11,7 +11,7 @@ using Fushigi.param;
 using Fushigi.ui.undo;
 using Fushigi.util;
 using ImGuiNET;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System.Data;
 using System.Drawing;
 using System.Numerics;

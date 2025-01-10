@@ -2,7 +2,7 @@
 using Fushigi.ui;
 using Fushigi.util;
 using Silk.NET.Input;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System.IO;
 using System.Numerics;
 using System.Reflection;

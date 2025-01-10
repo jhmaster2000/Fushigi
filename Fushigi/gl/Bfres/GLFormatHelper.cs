@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Fushigi.Bfres;
 using Fushigi.course;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 
 namespace Fushigi.gl.Bfres
 {

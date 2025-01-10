@@ -3,7 +3,7 @@ using Fushigi.Byml;
 using Fushigi.gl.Bfres;
 using Fushigi.Msbt;
 using Fushigi.util;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Fushigi.course;
 
 namespace Fushigi

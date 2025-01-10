@@ -1,6 +1,6 @@
 ﻿using Fushigi.Bfres;
 using Fushigi.gl.Shaders;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System.Numerics;
 
 namespace Fushigi.gl.Bfres

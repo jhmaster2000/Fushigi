@@ -2,7 +2,7 @@
 using Fushigi.course;
 using Fushigi.gl.Shaders;
 using Fushigi.util;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 using System;
 using System.Collections.Generic;

@@ -7,7 +7,7 @@ using Fushigi.util;
 using Fushigi.windowing;
 using ImGuiNET;
 using Silk.NET.Core;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.PixelFormats;

@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Fushigi.SARC;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Newtonsoft.Json;
 using Fushigi.Byml;
 using Silk.NET.Core;

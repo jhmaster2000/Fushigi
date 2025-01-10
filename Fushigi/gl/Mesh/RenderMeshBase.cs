@@ -1,5 +1,5 @@
 ﻿using Fushigi.ui.widgets;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -4,7 +4,7 @@ using Fushigi.gl.Shaders;
 using Fushigi.util;
 using Newtonsoft.Json.Linq;
 using Silk.NET.Input;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 using System;
 using System.Collections.Generic;

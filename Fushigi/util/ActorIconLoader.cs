@@ -1,5 +1,5 @@
 ﻿using Fushigi.gl;
-using Silk.NET.OpenGL.Legacy;
+using Silk.NET.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.IO.Compression;
