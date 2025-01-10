@@ -373,7 +373,7 @@ namespace Fushigi.ui.widgets
             }
 
             //Display skybox
-            EnvironmentData.RenderSky(gl, this.Camera);
+            //EnvironmentData.RenderSky(gl, this.Camera);
 
             // Actors are listed in the order they were pulled from the yaml.
             // So they are ordered by depth for rendering.
